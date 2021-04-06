@@ -3,9 +3,8 @@ class Arma:
     poder: int
     resistencia: int
 
-    def __init__(self,nombre,poder,resistencia,categoria=1):
+    def __init__(self,nombre,poder,resistencia):
         self.nombre = nombre
         self.poder = poder
         self.resistencia = resistencia
-        self.categoria = categoria
-        
+    
