@@ -3,20 +3,23 @@ from super_heroe import SuperHeroe
 
 if __name__ == '__main__':
 
-    pistola = Arma('Pistola',2,8)
-    metralleta = Arma('Metralleta',2,10)
-
-    falcon = SuperHeroe('Samuel Wilson',2,50,pistola)
-    bucky = SuperHeroe('Bucky Barnes',3,50,metralleta)
-
     '''Primer el jugador seleciona el personje con el 
     quiere atacar y luego que inicie la batalla.
     El juego termina cuando la vida de uno de los 
     dos sea menor a 0 si la resistencia es menor 
     a 1 el jugador tendra la opción de                
     recargar mas escribiendo el número 1 '''
+
+    jugando = input('Iniciar Juego (s/n) ').lower()
     
-    while 1: 
+    while jugando == 's':
+        pistola = Arma('Pistola',2,8)
+        metralleta = Arma('Metralleta',2,10)
+
+        falcon = SuperHeroe('Samuel Wilson',2,50,pistola)
+        bucky = SuperHeroe('Bucky Barnes',3,50,metralleta)
+         
+    
         print('✓==\U0001F3AE GAME FALCON & WINTER SOLIER \U0001F3AE==✓')
 
         print('ELIGE TU SUPER HEROE: ')
@@ -67,5 +70,9 @@ if __name__ == '__main__':
                         
             else:
                 print('\U0001F64C GANASTE FELICIDADES \U0001F64C')
-        break
+
+        jugando = input('Continuar Juego (s/n) ').lower()
     
+
+
+
